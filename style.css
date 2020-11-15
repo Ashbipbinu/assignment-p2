@@ -1,0 +1,292 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+.back{
+    width:300px;
+    height:450px;
+    color: black;
+    border-radius: 5px;
+    border:1px solid grey;
+    border-radius: 8px;
+    margin:auto;
+    margin-top:140px;
+    font-family: cursive;
+    background-color:white    
+    
+}
+.button{
+   background-color: green;
+   color:white;
+   margin-left: -36px;
+   margin-top: 80px;
+   margin-bottom: 20px;
+   padding-left: 68px;
+   padding-right:68px;
+   border-radius: 20px;
+   
+
+}
+.emil{
+    padding-top: 81px;
+    margin-left: -37px;
+}
+.pass{
+    padding-top: 81px;
+    margin-left: -37px;
+}
+.input-label{
+    width:25em;
+    height:2em;
+}
+.signup-div{
+    margin:auto;
+    padding-left:55px;
+    padding-right:50px;
+    padding-top:40px;
+    margin-top:100px;
+    height:450px;
+    width:350px;
+    background-color:white;
+    border-radius:8px;
+    border:2px solid grey
+
+}
+.butt{
+    width:25.7em;
+    height:41px;
+    background-color:blue;
+    border-radius: 8px;;
+    color:white;
+    font-size: 0.84em;
+}
+.butt:hover{
+    background-color: green;
+    transition: ease-in-out;
+    transition-delay:0.1s;
+}
+.signIn-div{
+    margin:auto;
+    padding-left:55px;
+    padding-right:50px;
+    padding-top:50px;
+    margin-top:150px;
+    height:330px;
+    width:350px;
+    background-color:white;
+    border-radius:8px;
+    border:2px solid grey
+
+
+}
+.heading{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.boxes{
+    border:2px solid grey;
+    border-radius: 8px;
+    width: 219px;
+    height: 254px;
+    float: left;
+    margin:18px;
+    
+}
+.pic{
+    width:200px;
+    margin:7px;
+    height:200px;
+    background-image: url(./image/trivandrum/trivandrum-about.jpg);
+    background-size: cover;
+}
+.dist{
+    margin:7px;
+    text-align: center;
+}
+
+.dropdown-item:hover{
+    transition: ease-in-out;
+    background-color: yellowgreen;
+    transition-delay: 90ms;
+    color:white;
+    
+
+}
+.col1{
+    width:100px;
+    height:250px;
+    float:left;
+    
+
+}
+.col2{
+    float:left;
+    height:500px;
+    width:30%;
+}
+    
+
+.exampleInputEmail1{
+    width:280px;
+    height: 40px;
+}
+.exampleInputPassword1{
+    width:280px;
+    height: 40px;
+}
+
+/* Form part for sign In page starting */
+.container{
+    border:1px solid green;
+    border-radius: 10px;
+    width:315px;
+    height:70vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 30px;
+    background-color: white;
+    
+}
+.container .form-part{
+    margin:0;
+    padding:0;
+}
+/* Form part Ending*/
+
+.form-part-signin{
+    border:1px solid white;
+    color:black;
+    border-radius: 10px;
+    width:80%;
+    height:550px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+  .tales {
+    width: 100%;
+    margin:0;
+  }
+.mycorse{
+    height:500px;
+}
+.carousel-caption
+  {
+    top: 46%;
+  }
+
+.container1{
+    position: relative;
+    width:1200px;
+    height: 300px;
+    margin:auto;
+    background-color: white;
+}
+.container1 .coloumn{
+    position: relative;
+    width:calc(400px - 30px);
+    height:calc(300px - 30px);
+    background-color: chartreuse;
+    float:left;
+    margin:auto;
+    margin:15px;
+    box-sizing: border-box;
+    overflow:hidden;
+    border-radius:10px;
+    
+}
+.container1 .coloumn .icon{
+    position: relative;
+    background-image: url(./image/trivandrum/kollam.jpg);
+    width:100%;
+    height:100%;
+    transition: 0.5s;
+    z-index: 1;
+
+    
+}
+.container1 .coloumn:hover .icon{
+    top:20px;
+    right: calc(50% - 40px);
+    width:80px;
+    height:80px;
+    border-radius:50%;
+
+
+
+}
+.container1 .coloumn:hover .icon { 
+    font-size:40px;
+
+}
+.container1 .coloumn .content{
+    position: absolute;
+    top:100px;
+    height: calc(100% -100px);
+    text-align:center;
+    padding:20px;
+    box-sizing: border-box;
+}
+.container1 .coloumn .icon h3{
+    margin:0;
+    padding:0;
+    color:white;
+}
+.parent{
+    width:100%;
+    height:650px;
+    background-attachment: fixed;
+    margin-top:90px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.child{
+    width:70%;
+    height: 800px;
+    padding-top: 80px;;
+    background-color:white;
+    border:2px solid black;
+    border-radius: 10px;
+    display:flex;
+    justify-content: center;
+    background-color: white;
+    
+}
+.form{
+    width:80%;
+    background-color: white;
+    display:flex;
+    flex-direction: column;
+
+    
+}
+
+.signupemail{
+    width:100%;
+    height:40px;
+    display:flex;
+    flex-direction:row;
+    margin:10px;
+
+    
+}
+.signuppass{
+    width:100%;
+    height:40px;
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-end;
+    margin:10px;
+}
+h4{
+    margin-top:30px;
+}
+

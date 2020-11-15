@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="bg-success">
+    <div class="row text-white">
+      <div class="col-md-6   p-3 pl-5">
+          <h4 >KeralaTourism.com</h4>
+      </div>
+      <div class="col-md-6 my-auto">
+         <!-- Nav Started -->
+  <nav class="navbar navbar-expand-sm navbar-light ">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item">
+          <a class="nav-link text-white"  href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="about.html">About</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              District
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="trivandrum.html">Trivandrum</a>
+              <a class="dropdown-item" href="kollam.html">Kollam</a>
+              <a class="dropdown-item" href="Pathanam.html">Pathanamthitta</a>
+              <a class="dropdown-item" href="Alapuzha.html">Alapuzha</a>
+              <a class="dropdown-item" href="kottayam.html">Kottayam</a>
+              <a class="dropdown-item" href="idukky.html">Idukki</a>
+              <a class="dropdown-item" href="Ernakulam.html">Ernakulam</a>
+              <a class="dropdown-item" href="thrissur.html">Thrissur</a>
+              <a class="dropdown-item" href="palakad.html">Palakad</a>
+              <a class="dropdown-item" href="malapuram.html">Malapuram</a>
+              <a class="dropdown-item" href="kozhikode.html">Kozhikode</a>
+              <a class="dropdown-item" href="wayanad.html">Wayanad</a>
+              <a class="dropdown-item" href="kannur.html">Kannur</a>
+                <a class="dropdown-item" href="Kasar.html">Kasaragod</a>
+            </div>
+          </li>
+       
+        <li class="nav-item">
+          <a class="nav-link text-white" href="signin.html">Sign In</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="SignUp.html">Sign Up</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Nav ended -->
+      </div>
+    </div>
+  </header>
+  
+  <div class="container">
+     <!-- Form Starting -->
+     <form class="form-part" action="index.html" onclick="return validate() && passwordChanged()">
+      <h4 style="text-align: center;">
+          Sign In
+      </h4>
+      <div class="form-group">
+        <!-- Email part is starting -->
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="text" class="exampleInputEmail1" id="email"  aria-describedby="emailHelp">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <label for="Validation message" id="label"></label>
+        <!-- Email part is ending -->
+      </div>
+      <!-- Password part is starting -->
+      <!-- Password div starting -->
+      <div>
+        <label for="Password">Password</label>
+        <input type="password"  class="exampleInputPassword1" id=password onkeyup="return passwordChanged();" required>
+        <span id="strength"></span>
+      </div>
+      <!-- Password div ending -->
+      <!-- Password part is ending -->
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+      </div>
+      <button type="submit" class="btn btn-primary" style="width: 270px;">Submit</button>
+      <p><a href="SignUp.html">Create a new account?</a></p>
+    </form>
+  </div>
+  
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.2.0/zxcvbn.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="main.js">
+
+  </script>
+  <script></script>
+
+  <script language="javascript">
+    function passwordChanged() {
+      var strength = document.getElementById('strength');
+      var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
+      var mediumRegex = new RegExp("^(?=.{7,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
+      var enoughRegex = new RegExp("(?=.{6,}).*", "g");
+      var pwd = document.getElementById("password");
+      if (pwd.value.length == 0) {
+          strength.innerHTML = 'Type Password';
+          return false;
+      } else if (false == enoughRegex.test(pwd.value)) {
+          strength.innerHTML = 'More Characters';
+          return false;
+      } else if (strongRegex.test(pwd.value)) {
+          strength.innerHTML = '<span style="color:green">Strong!</span>';
+          return true;
+      } else if (mediumRegex.test(pwd.value)) {
+          strength.innerHTML = '<span style="color:orange">Medium!</span>';
+          return false;
+      } else {
+          strength.innerHTML = '<span style="color:red">Weak!</span>';
+          return false;
+      }
+    }
+  </script>
+  
+
+</body>
+</html>
